@@ -14,7 +14,7 @@ def big_boi():
     for i in range (100):        
         MOY_num += 5.4
         MOY.extend([MOY_num])
-        event = random.randint(1,99)
+        event = random.randint(1,93)
 
         if genera_num == 0:
             genera_num = 0
@@ -24,38 +24,39 @@ def big_boi():
             marker = 1
         elif genera_num > 100000:
             genera_num = genera_num*0.875
-            
-        elif event <= 7:
-            genera_num = round(genera_num*0.51)
-            if event == 1:
-                plt.axvline(x = MOY_num, color='r')
-            elif event == 2:
-                plt.axvline(x = MOY_num, color='purple')
-        elif event <= 18:
-            genera_num = round(genera_num*0.69)
-        elif event <= 42:
-            genera_num = round(genera_num*0.875)
-        elif event <= 68:
-            genera_num = round(genera_num*1.06)
-        elif event <= 83:
-            genera_num = round(genera_num*1.24)
-        elif event <= 88:
-            genera_num = round(genera_num*1.42)
-        elif event <= 92:
-            genera_num = round(genera_num*1.605)
-        elif event <= 94:
-            genera_num = round(genera_num*1.79)
-        elif event <= 97:
-            genera_num = round(genera_num*1.97)
-        elif event <= 99:
-            genera_num = round(genera_num*2.885)
 
+
+        elif event <= 1:
+            genera_num = round(genera_num*random.uniform(0.563, 0.648))
+            plt.axvline(x = MOY_num, color='purple')
+        elif event <= 3:
+            genera_num = round(genera_num*random.uniform(0.648, 0.734))
+            #if event == 2:
+            plt.axvline(x = MOY_num, color='r')
+        elif event <= 5:
+            genera_num = round(genera_num*random.uniform(0.734, 0.819))
+        elif event <= 13:
+            genera_num = round(genera_num*random.uniform(0.819, 0.904))
+        elif event <= 23:
+            genera_num = round(genera_num*random.uniform(0.904, 0.989))
+        elif event <= 70:
+            genera_num = round(genera_num*random.uniform(0.989, 1.074))
+        elif event <= 84:
+            genera_num = round(genera_num*random.uniform(1.074, 1.159))
+        elif event <= 89:
+            genera_num = round(genera_num*random.uniform(1.159, 1.245))
+        elif event <= 91:
+            genera_num = round(genera_num*random.uniform(1.245, 1.330))
+        elif event <= 92:
+            genera_num = round(genera_num*random.uniform(1.585, 1.670))
+        elif event <= 93:
+            genera_num = round(genera_num*random.uniform(2.181, 2.267))
+            
         genera.extend([genera_num])
-        
         
         if marker == 1:
             break
-
+        
     plt.plot(MOY, genera, color='g')
     
 class Main(object):
