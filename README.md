@@ -1,2 +1,2 @@
 # Diversity-Curve-Generator
-Simulates the origination and extinction rates based on paleo data
+Simulates a diversity curve for a hypothetical earth-like planet using API calculated origination and extinction rates of genera.
